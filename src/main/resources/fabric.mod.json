@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "eternis",
+	"version": "${version}",
+	"name": "Eternis",
+	"description": "",
+	"authors": [
+		"Lumi"
+	],
+	"contributors": [
+		"Prangell"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "",
+		"issues": ""
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/eternis/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.lumi.eternis.Eternis"
+		],
+		"client": [
+			"dev.lumi.eternis.EternisClient"
+		],
+		"fabric-datagen": [
+			"dev.lumi.eternis.EternisDataGenerator"
+		],
+		"preLaunch": [
+			"dev.lumi.eternis.EternisPreLaunchEntrypoint"
+		]
+	},
+	"mixins": [
+		"eternis.mixins.json"
+	],
+	"accessWidener": "eternis.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

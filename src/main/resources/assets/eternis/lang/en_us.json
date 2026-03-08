@@ -1,0 +1,52 @@
+{
+  "__Comment": "God Weapons",
+  "item.eternis.frostbite": "Frostbite (Greatsword)",
+  "item.eternis.frostbite.lore": "Forged in the heart of an ancient blizzard. Each swing carries the stillness of frozen winds.",
+  "item.eternis.glacier_spear": "Glacier Spear (Spear)",
+  "item.eternis.glacier_spear.lore": "A spear carved from living ice. The land freezes wherever its path is drawn.",
+  "item.eternis.winters_dominion": "Winter's Dominion (Warhammer)",
+  "item.eternis.winters_dominion.lore": "The hammer of the northern storms. It grows colder with every victory.",
+
+  "item.eternis.heartwood_reaver": "Heartwood Reaver (Great Axe)",
+  "item.eternis.heartwood_reaver.lore": "A relic carved from living heartwood. The forest itself reaches out to defend its bearer.",
+
+  "item.eternis.verdant_edge": "Verdant Edge (Longsword)",
+  "item.eternis.verdant_edge.lore": "A blade born of fertile soil. Life itself rises to aid its wielder.",
+  "item.eternis.windpiercer": "Windpiercer (Spear)",
+  "item.eternis.windpiercer.lore": "Forged for the open plains, where nothing outruns the wind.",
+  "item.eternis.sylvan_oath": "Sylvan Oath (Bow)",
+  "item.eternis.sylvan_oath.lore": "A pact between the wild and the hunter. The forest never forgets its allies.",
+
+  "item.eternis.sunfang": "Sunfang (Sword)",
+  "item.eternis.sunfang.lore": "A blade kissed by the burning sun. Its strikes carry the fury of daylight.",
+  "item.eternis.pride_talons": "Pride Talons (Dual Daggers)",
+  "item.eternis.pride_talons.lore": "Daggers of the apex predator. Each victory sharpens the hunt.",
+  "item.eternis.storm_javelin": "Storm Javelin (Trident / Spear)",
+  "item.eternis.storm_javelin.lore": "A weapon struck by lightning itself. The storm answers its call.",
+
+  "item.eternis.dune_scimitar": "Dune Scimitar (Scimitar)",
+  "item.eternis.dune_scimitar.lore": "A blade shaped by shifting sands. Its strike blinds like the desert storm.",
+  "item.eternis.pharaohs_judgement": "Pharaoh's Judgement (Staff)",
+  "item.eternis.pharaohs_judgement.lore": "A relic of forgotten kings. Even the dead remember its authority.",
+
+  "item.eternis.canyon_breaker": "Canyon Breaker (War Pick)",
+  "item.eternis.canyon_breaker.lore": "Forged from the iron veins of the badlands. Even the earth yields to its power.",
+
+  "item.eternis.mycelium_sovereign": "Mycelium Sovereign (Scepter)",
+  "item.eternis.mycelium_sovereign.lore": "A scepter grown from the hidden fungal network beneath the island.",
+
+  "item.eternis.venom_reaver": "Venom Reaver (Greatsword)",
+  "item.eternis.venom_reaver.lore": "Forged from the fangs of jungle predators, every kill sharpens its poison.",
+  "item.eternis.canopy_breaker": "Canopy Breaker (War Spear)",
+  "item.eternis.canopy_breaker.lore": "A spear grown from ancient jungle wood. The forest itself answers its call.",
+  "item.eternis.infernal_canopy": "Infernal Canopy (Quick Charge Crossbow)",
+  "item.eternis.infernal_canopy.lore": "Born where jungle roots meet molten earth. Flame and vine rise together.",
+
+  "item.eternis.hellgate_tyrant": "Hellgate Tyrant (Greatsword)",
+  "item.eternis.hellgate_tyrant.lore": "A blade forged in the fires of the Nether. Its master may command the gates of hell.",
+  "item.eternis.void_sovereign": "Void Sovereign (Scythe)",
+  "item.eternis.void_sovereign.lore": "Forged from fragments of the Void itself. The End bends to its wielder.",
+
+  "__Comment": "Item Groups",
+  "itemgroup.eternis.eternis_godweapons_group": "Eternis: (God Weapons)"
+}
