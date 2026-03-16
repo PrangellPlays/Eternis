@@ -19,15 +19,4 @@ public interface IRelicItem {
     default void onHeldTick(ItemStack stack, World world, PlayerEntity player) {
         // Default: do nothing, override for passive effects
     }
-
-    /**
-     * Called when the player hits a target with this item.
-     *
-     * @param stack The item stack
-     * @param target The entity hit
-     * @param attacker The player attacking
-     */
-    default void onPostHit(ItemStack stack, LivingEntity target, PlayerEntity attacker) {
-        // Default: do nothing, override for on-hit effects
-    }
 }

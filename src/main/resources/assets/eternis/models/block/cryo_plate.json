@@ -1,0 +1,7 @@
+{
+  "parent": "eternis:block/template/template_trimmed_panel",
+  "textures": {
+    "panelTrim": "eternis:block/cryo_plate_trim",
+    "panel": "eternis:block/cryo_plate"
+  }
+}

@@ -30,6 +30,9 @@
 		],
 		"preLaunch": [
 			"dev.lumi.eternis.EternisPreLaunchEntrypoint"
+		],
+		"cardinal-components": [
+			"dev.lumi.eternis.init.EternisComponents"
 		]
 	},
 	"mixins": [
@@ -41,5 +44,11 @@
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"eternis:saved_inventory",
+			"eternis:kit_player"
+		]
 	}
 }

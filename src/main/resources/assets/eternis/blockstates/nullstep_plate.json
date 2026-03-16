@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "eternis:block/nullstep_plate",
+      "x": 270
+    },
+    "facing=east": {
+      "model": "eternis:block/nullstep_plate",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "eternis:block/nullstep_plate",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "eternis:block/nullstep_plate"
+    },
+    "facing=up": {
+      "model": "eternis:block/nullstep_plate",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "eternis:block/nullstep_plate",
+      "y": 90
+    }
+  }
+}

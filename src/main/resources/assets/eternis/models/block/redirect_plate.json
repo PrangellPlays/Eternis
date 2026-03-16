@@ -1,0 +1,7 @@
+{
+  "parent": "eternis:block/template/template_trimmed_panel",
+  "textures": {
+    "panelTrim": "eternis:block/redirect_plate_trim",
+    "panel": "eternis:block/redirect_plate"
+  }
+}

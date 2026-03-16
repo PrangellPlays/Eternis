@@ -1,0 +1,7 @@
+{
+  "parent": "eternis:block/template/template_trimmed_panel",
+  "textures": {
+    "panelTrim": "eternis:block/kill_zone_trim",
+    "panel": "eternis:block/kill_zone"
+  }
+}

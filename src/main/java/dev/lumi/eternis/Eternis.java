@@ -1,8 +1,7 @@
 package dev.lumi.eternis;
 
-import dev.lumi.eternis.init.EternisDataComponents;
-import dev.lumi.eternis.init.EternisItemGroups;
-import dev.lumi.eternis.init.EternisItems;
+import dev.lumi.eternis.client.init.EternisScreenHandlers;
+import dev.lumi.eternis.init.*;
 import dev.lumi.eternis.util.RelicTickHandler;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,8 +16,11 @@ public class Eternis implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		EternisDataComponents.init();
+		EternisBlocks.init();
+		EternisBlockEntities.init();
 		EternisItems.init();
 		EternisItemGroups.init();
+		EternisScreenHandlers.init();
 
 		RelicTickHandler.init();
 	}

@@ -47,6 +47,34 @@
   "item.eternis.void_sovereign": "Void Sovereign (Scythe)",
   "item.eternis.void_sovereign.lore": "Forged from fragments of the Void itself. The End bends to its wielder.",
 
+  "__Commment": "Dungeon Blocks",
+  "block.eternis.locker_save": "Locker (Save)",
+  "block.eternis.locker_save.full": "Failed to save inventory as inventory is already saved",
+  "block.eternis.locker_retrieve": "Locker (Retrieve)",
+  "block.eternis.locker_retrieve.empty": "Failed to retrieve inventory as inventory is not saved",
+  "block.eternis.kit_selector": "Kit Selector",
+
+  "block.eternis.kill_zone": "Kill Zone",
+  "block.eternis.kill_zone.desc": "Kills the entity that collides with the block, unless they are invulnerable (Creative).",
+  "block.eternis.cryo_plate": "Cryo Plate (WIP)",
+  "block.eternis.cryo_plate.desc": "Suppresses the players momentum similar to soul sand, and is slippery like packed ice.",
+  "block.eternis.impulse_plate": "Impulse Plate",
+  "block.eternis.impulse_plate.desc": "Launches the player forward based on their facing direction.",
+  "block.eternis.nullstep_plate": "NullStep Plate",
+  "block.eternis.nullstep_plate.desc": "Kills the player's horizontal momentum without fully freezing them.",
+  "block.eternis.rebound_plate": "Rebound Plate",
+  "block.eternis.rebound_plate.desc": "Bounces the player based on the incoming falling speed. Warning the player will take fall damage.",
+  "block.eternis.redirect_plate": "Redirect Plate (WIP)",
+  "block.eternis.redirect_plate.desc": "Launches the player in the block's facing direction, not the player's direction.",
+  "block.eternis.vault_plate": "Vault Plate",
+  "block.eternis.vault_plate.desc": "Launches the player vertically.",
+
+  "lore.eternis.block.rotatable_block": "Rotatable Block",
+
+  "__Comment": "Container",
+  "container.eternis.kit_selector": "Kit Selector",
+  "container.eternis.kit_modify": "Kit Modify",
+
   "__Comment": "Item Groups",
   "itemgroup.eternis.eternis_godweapons_group": "Eternis: (God Weapons)"
 }

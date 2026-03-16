@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum EternisToolMaterials implements ToolMaterial {
-    RELIC(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 9000, 9.0F, -1.0F, 15, () -> Ingredient.ofItems((ItemConvertible) null));
+    RELIC(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, -1, 9.0F, -1.0F, 15, () -> Ingredient.ofItems((ItemConvertible) null));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

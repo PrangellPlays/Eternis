@@ -1,0 +1,80 @@
+package dev.lumi.eternis.init;
+
+import dev.lumi.eternis.Eternis;
+import dev.lumi.eternis.block.parkour.*;
+import dev.lumi.eternis.block.KitSelectorBlock;
+import dev.lumi.eternis.block.LockerBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Function;
+
+public class EternisBlocks {
+    protected static final Map<Block, Identifier> BLOCKS = new LinkedHashMap();
+    public static final Block LOCKER_SAVE;
+    public static final Block LOCKER_RETRIEVE;
+
+    public static final Block KIT_SELECTOR;
+
+    public static final Block KILL_ZONE;
+    public static final Block CRYO_PLATE;
+    public static final Block IMPULSE_PLATE;
+    public static final Block NULLSTEP_PLATE;
+    public static final Block REBOUND_PLATE;
+    public static final Block REDIRECT_PLATE;
+    public static final Block VAULT_PLATE;
+
+    public static void init() {
+        BLOCKS.forEach((block, id) -> {
+            Registry.register(Registries.BLOCK, id, block);
+        });
+    }
+
+    protected static <T extends Block> T register(String name, T block) {
+        BLOCKS.put(block, Eternis.id(name));
+        return block;
+    }
+
+    protected static <T extends Block> T registerWithItem(String name, T block) {
+        return registerWithItem(name, block, new Item.Settings());
+    }
+
+    protected static <T extends Block> T registerWithItem(String name, T block, Item.Settings settings) {
+        return registerWithItem(name, block, (b) -> {
+            return new BlockItem(b, settings);
+        });
+    }
+
+    protected static <T extends Block> T registerWithItem(String name, T block, Function<T, BlockItem> itemGenerator) {
+        EternisItems.register(name, (BlockItem)itemGenerator.apply(block));
+        return register(name, block);
+    }
+
+    public EternisBlocks() {
+    }
+
+    static {
+        LOCKER_SAVE = registerWithItem("locker_save", new LockerBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never), LockerBlock.LockerType.SAVE));
+        LOCKER_RETRIEVE = registerWithItem("locker_retrieve", new LockerBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never), LockerBlock.LockerType.RETRIEVE));
+
+        KIT_SELECTOR = registerWithItem("kit_selector", new KitSelectorBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+
+        KILL_ZONE = registerWithItem("kill_zone", new KillZoneBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        CRYO_PLATE = registerWithItem("cryo_plate", new CryoPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        IMPULSE_PLATE = registerWithItem("impulse_plate", new ImpulsePlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        NULLSTEP_PLATE = registerWithItem("nullstep_plate", new NullStepPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        REBOUND_PLATE = registerWithItem("rebound_plate", new ReboundPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        REDIRECT_PLATE = registerWithItem("redirect_plate", new RedirectPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+        VAULT_PLATE = registerWithItem("vault_plate", new VaultPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+    }
+}

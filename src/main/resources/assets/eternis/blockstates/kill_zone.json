@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "eternis:block/kill_zone",
+      "x": 270
+    },
+    "facing=east": {
+      "model": "eternis:block/kill_zone",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "eternis:block/kill_zone",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "eternis:block/kill_zone"
+    },
+    "facing=up": {
+      "model": "eternis:block/kill_zone",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "eternis:block/kill_zone",
+      "y": 90
+    }
+  }
+}

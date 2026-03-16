@@ -1,0 +1,10 @@
+{
+  "type": "eternis:dungeon",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "eternis:dungeon",
+      "layers": []
+    }
+  }
+}
