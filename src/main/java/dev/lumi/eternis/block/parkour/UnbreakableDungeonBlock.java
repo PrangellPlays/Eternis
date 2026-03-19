@@ -1,4 +1,4 @@
-package dev.lumi.eternis.block;
+package dev.lumi.eternis.block.parkour;
 
 import net.minecraft.block.Block;
 

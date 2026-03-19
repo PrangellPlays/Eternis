@@ -5,6 +5,7 @@ import dev.lumi.eternis.block.parkour.*;
 import dev.lumi.eternis.block.KitSelectorBlock;
 import dev.lumi.eternis.block.LockerBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -33,6 +34,39 @@ public class EternisBlocks {
     public static final Block REBOUND_PLATE;
     public static final Block REDIRECT_PLATE;
     public static final Block VAULT_PLATE;
+
+    public static final Block DUNGEON_BRICKS;
+    public static final Block DUNGEON_BRICK_STAIRS;
+    public static final Block DUNGEON_BRICK_SLAB;
+    public static final Block DUNGEON_BRICK_WALL;
+
+    public static final Block CRACKED_DUNGEON_BRICKS;
+
+    public static final Block MOSSY_DUNGEON_BRICKS;
+    public static final Block MOSSY_DUNGEON_BRICK_STAIRS;
+    public static final Block MOSSY_DUNGEON_BRICK_SLAB;
+    public static final Block MOSSY_DUNGEON_BRICK_WALL;
+
+    public static final Block CHISELED_DUNGEON_BRICKS;
+
+    public static final Block POLISHED_DUNGEON_BRICKS;
+    public static final Block POLISHED_DUNGEON_BRICK_STAIRS;
+    public static final Block POLISHED_DUNGEON_BRICK_SLAB;
+
+    public static final Block DUNGEON_TILES;
+    public static final Block DUNGEON_TILE_STAIRS;
+    public static final Block DUNGEON_TILE_SLAB;
+    public static final Block DUNGEON_TILE_WALL;
+
+    public static final Block CRACKED_DUNGEON_TILES;
+
+    public static final Block MOSSY_DUNGEON_TILES;
+    public static final Block MOSSY_DUNGEON_TILE_STAIRS;
+    public static final Block MOSSY_DUNGEON_TILE_SLAB;
+    public static final Block MOSSY_DUNGEON_TILE_WALL;
+
+    public static final Block DUNGEON_PILLAR;
+
 
     public static void init() {
         BLOCKS.forEach((block, id) -> {
@@ -76,5 +110,37 @@ public class EternisBlocks {
         REBOUND_PLATE = registerWithItem("rebound_plate", new ReboundPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
         REDIRECT_PLATE = registerWithItem("redirect_plate", new RedirectPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
         VAULT_PLATE = registerWithItem("vault_plate", new VaultPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
+
+        DUNGEON_BRICKS = registerWithItem("dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_BRICK_STAIRS = registerWithItem("dungeon_brick_stairs", new UnbreakableDungeonStairsBlock(DUNGEON_BRICKS.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_BRICK_SLAB = registerWithItem("dungeon_brick_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_BRICK_WALL = registerWithItem("dungeon_brick_wall", new UnbreakableDungeonWallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        CRACKED_DUNGEON_BRICKS = registerWithItem("cracked_dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        MOSSY_DUNGEON_BRICKS = registerWithItem("mossy_dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_BRICK_STAIRS = registerWithItem("mossy_dungeon_brick_stairs", new UnbreakableDungeonStairsBlock(MOSSY_DUNGEON_BRICKS.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_BRICK_SLAB = registerWithItem("mossy_dungeon_brick_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_BRICK_WALL = registerWithItem("mossy_dungeon_brick_wall", new UnbreakableDungeonWallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        CHISELED_DUNGEON_BRICKS = registerWithItem("chiseled_dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        POLISHED_DUNGEON_BRICKS = registerWithItem("polished_dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        POLISHED_DUNGEON_BRICK_STAIRS = registerWithItem("polished_dungeon_brick_stairs", new UnbreakableDungeonStairsBlock(POLISHED_DUNGEON_BRICKS.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        POLISHED_DUNGEON_BRICK_SLAB = registerWithItem("polished_dungeon_brick_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        DUNGEON_TILES = registerWithItem("dungeon_tiles", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_TILE_STAIRS = registerWithItem("dungeon_tile_stairs", new UnbreakableDungeonStairsBlock(DUNGEON_TILES.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_TILE_SLAB = registerWithItem("dungeon_tile_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_TILE_WALL = registerWithItem("dungeon_tile_wall", new UnbreakableDungeonWallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        CRACKED_DUNGEON_TILES = registerWithItem("cracked_dungeon_tiles", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        MOSSY_DUNGEON_TILES = registerWithItem("mossy_dungeon_tiles", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_TILE_STAIRS = registerWithItem("mossy_dungeon_tile_stairs", new UnbreakableDungeonStairsBlock(MOSSY_DUNGEON_TILES.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_TILE_SLAB = registerWithItem("mossy_dungeon_tile_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        MOSSY_DUNGEON_TILE_WALL = registerWithItem("mossy_dungeon_tile_wall", new UnbreakableDungeonWallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+        DUNGEON_PILLAR = registerWithItem("dungeon_pillar", new UnbreakableDungeonPillarBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     }
 }

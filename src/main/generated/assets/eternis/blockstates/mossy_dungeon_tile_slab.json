@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eternis:block/mossy_dungeon_tile_slab"
+    },
+    "type=double": {
+      "model": "eternis:block/mossy_dungeon_tiles"
+    },
+    "type=top": {
+      "model": "eternis:block/mossy_dungeon_tile_slab_top"
+    }
+  }
+}

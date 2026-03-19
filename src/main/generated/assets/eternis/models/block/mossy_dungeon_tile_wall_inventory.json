@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "eternis:block/mossy_dungeon_tiles"
+  }
+}

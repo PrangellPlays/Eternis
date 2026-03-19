@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eternis:block/polished_dungeon_brick_slab"
+    },
+    "type=double": {
+      "model": "eternis:block/polished_dungeon_bricks"
+    },
+    "type=top": {
+      "model": "eternis:block/polished_dungeon_brick_slab_top"
+    }
+  }
+}

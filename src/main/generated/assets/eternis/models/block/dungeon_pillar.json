@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "eternis:block/dungeon_pillar_top",
+    "side": "eternis:block/dungeon_pillar"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "eternis:block/polished_dungeon_bricks",
+    "side": "eternis:block/polished_dungeon_bricks",
+    "top": "eternis:block/polished_dungeon_bricks"
+  }
+}

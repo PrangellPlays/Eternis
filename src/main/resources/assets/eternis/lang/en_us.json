@@ -48,6 +48,38 @@
   "item.eternis.void_sovereign.lore": "Forged from fragments of the Void itself. The End bends to its wielder.",
 
   "__Commment": "Dungeon Blocks",
+  "block.eternis.dungeon_bricks": "Dungeon Bricks",
+  "block.eternis.dungeon_brick_stairs": "Dungeon Brick Stairs",
+  "block.eternis.dungeon_brick_slab": "Dungeon Brick Slab",
+  "block.eternis.dungeon_brick_wall": "Dungeon Brick wall",
+
+  "block.eternis.cracked_dungeon_bricks": "Cracked Dungeon Bricks",
+
+  "block.eternis.mossy_dungeon_bricks": "Mossy Dungeon Bricks",
+  "block.eternis.mossy_dungeon_brick_stairs": "Mossy Dungeon Brick Stairs",
+  "block.eternis.mossy_dungeon_brick_slab": "Mossy Dungeon Brick Slab",
+  "block.eternis.mossy_dungeon_brick_wall": "Mossy Dungeon Brick Wall",
+
+  "block.eternis.chiseled_dungeon_bricks": "Chiseled Dungeon Bricks",
+
+  "block.eternis.polished_dungeon_bricks": "Polished Dungeon Bricks",
+  "block.eternis.polished_dungeon_brick_stairs": "Polished Dungeon Brick Stairs",
+  "block.eternis.polished_dungeon_brick_slab": "Polished Dungeon Brick Wall",
+
+  "block.eternis.dungeon_tiles": "Dungeon Tiles",
+  "block.eternis.dungeon_tile_stairs": "Dungeon Tile Stairs",
+  "block.eternis.dungeon_tile_slab": "Dungeon Tile Slab",
+  "block.eternis.dungeon_tile_wall": "Dungeon Tile Wall",
+
+  "block.eternis.cracked_dungeon_tiles": "Cracked Dungeon Tiles",
+
+  "block.eternis.mossy_dungeon_tiles": "Mossy Dungeon Tiles",
+  "block.eternis.mossy_dungeon_tile_stairs": "Mossy Dungeon Tile Stairs",
+  "block.eternis.mossy_dungeon_tile_slab": "Mossy Dungeon Tile Slab",
+  "block.eternis.mossy_dungeon_tile_wall": "Mossy Dungeon Tile Wall",
+
+  "block.eternis.dungeon_pillar": "Dungeon Pilar",
+
   "block.eternis.locker_save": "Locker (Save)",
   "block.eternis.locker_save.full": "Failed to save inventory as inventory is already saved",
   "block.eternis.locker_retrieve": "Locker (Retrieve)",
@@ -76,5 +108,6 @@
   "container.eternis.kit_modify": "Kit Modify",
 
   "__Comment": "Item Groups",
-  "itemgroup.eternis.eternis_godweapons_group": "Eternis: (God Weapons)"
+  "itemgroup.eternis.eternis_godweapons_group": "Eternis: (God Weapons)",
+  "itemgroup.eternis.eternis_dungeon_group": "Eternis: (Dungeon)"
 }

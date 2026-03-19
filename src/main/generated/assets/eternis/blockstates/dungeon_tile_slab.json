@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eternis:block/dungeon_tile_slab"
+    },
+    "type=double": {
+      "model": "eternis:block/dungeon_tiles"
+    },
+    "type=top": {
+      "model": "eternis:block/dungeon_tile_slab_top"
+    }
+  }
+}

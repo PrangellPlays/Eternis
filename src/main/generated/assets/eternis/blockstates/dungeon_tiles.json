@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "eternis:block/dungeon_tiles"
+    }
+  }
+}
