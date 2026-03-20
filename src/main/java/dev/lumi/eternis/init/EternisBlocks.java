@@ -111,7 +111,7 @@ public class EternisBlocks {
         REDIRECT_PLATE = registerWithItem("redirect_plate", new RedirectPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
         VAULT_PLATE = registerWithItem("vault_plate", new VaultPlateBlock(FabricBlockSettings.create().instrument(NoteBlockInstrument.HAT).strength(-1.0F, 3600000.0F).sounds(BlockSoundGroup.LODESTONE).nonOpaque().allowsSpawning(Blocks::never)));
 
-        DUNGEON_BRICKS = registerWithItem("dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+        DUNGEON_BRICKS = registerWithItem("dungeon_bricks", new UnbreakableDungeonBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS).luminance((state) -> 0)));
         DUNGEON_BRICK_STAIRS = registerWithItem("dungeon_brick_stairs", new UnbreakableDungeonStairsBlock(DUNGEON_BRICKS.getDefaultState(), AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
         DUNGEON_BRICK_SLAB = registerWithItem("dungeon_brick_slab", new UnbreakableDungeonSlabBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
         DUNGEON_BRICK_WALL = registerWithItem("dungeon_brick_wall", new UnbreakableDungeonWallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
