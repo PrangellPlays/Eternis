@@ -1,14 +1,13 @@
-package dev.lumi.eternis.block;
+package dev.lumi.eternis.block.dungeon;
 
-import dev.lumi.eternis.block.entity.KitSelectorBlockEntity;
-import dev.lumi.eternis.client.screen.KitSelectorScreenHandler;
+import dev.lumi.eternis.block.dungeon.entity.KitSelectorBlockEntity;
+import dev.lumi.eternis.client.screen.kit.KitSelectorScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;

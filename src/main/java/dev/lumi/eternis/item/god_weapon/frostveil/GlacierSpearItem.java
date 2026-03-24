@@ -21,6 +21,8 @@ public class GlacierSpearItem extends Item implements IRelicItem {
 //    Ability — Ice Wall:
 //    Creates a short wall of packed ice.
 
+//    Obtained from the "The Frozen Keep"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.glacier_spear.lore").formatted(Formatting.AQUA));

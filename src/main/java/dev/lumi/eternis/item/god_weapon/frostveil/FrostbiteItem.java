@@ -21,6 +21,8 @@ public class FrostbiteItem extends Item implements IRelicItem {
 //    Ability — Blizzard:
 //    Creates a short snowstorm slowing enemies.
 
+//    Obtained from the "The Whitevault"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.frostbite.lore").formatted(Formatting.AQUA));

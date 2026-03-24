@@ -1,4 +1,4 @@
-package dev.lumi.eternis.block;
+package dev.lumi.eternis.block.dungeon;
 
 import dev.lumi.eternis.cca.PlayerSavedInventoryComponent;
 import dev.lumi.eternis.init.EternisComponents;

@@ -1,4 +1,4 @@
-package dev.lumi.eternis.block.parkour;
+package dev.lumi.eternis.block.dungeon.dungeonblock;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;

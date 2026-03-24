@@ -1,7 +1,8 @@
 package dev.lumi.eternis.init;
 
 import dev.lumi.eternis.Eternis;
-import dev.lumi.eternis.block.entity.KitSelectorBlockEntity;
+import dev.lumi.eternis.block.dungeon.entity.KitSelectorBlockEntity;
+import dev.lumi.eternis.block.dungeon.waygate.WaygateBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -15,6 +16,8 @@ import java.util.Map;
 public class EternisBlockEntities {
     protected static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap();
     public static final BlockEntityType<KitSelectorBlockEntity> KIT_SELECTOR;
+
+    public static final BlockEntityType<WaygateBlockEntity> WAYGATE;
 
     public EternisBlockEntities() {
     }
@@ -32,5 +35,7 @@ public class EternisBlockEntities {
 
     static {
         KIT_SELECTOR = create("kit_selector", FabricBlockEntityTypeBuilder.create(KitSelectorBlockEntity::new, EternisBlocks.KIT_SELECTOR).build());
+
+        WAYGATE = create("waygate", FabricBlockEntityTypeBuilder.create(WaygateBlockEntity::new, EternisBlocks.WAYGATE).build());
     }
 }

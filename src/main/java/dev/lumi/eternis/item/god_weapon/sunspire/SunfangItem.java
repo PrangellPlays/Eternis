@@ -21,6 +21,8 @@ public class SunfangItem extends Item implements IRelicItem {
 //    Ability — Solar Strike:
 //    Call down a beam of sunlight.
 
+//    Obtained from the "Temple of The First Dawn"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.sunfang.lore").formatted(Formatting.YELLOW));

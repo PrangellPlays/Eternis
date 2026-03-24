@@ -35,6 +35,8 @@ public class InfernalCanopyItem extends Item implements IRelicItem {
 
 //    The magma blocks revert back after a few seconds so terrain isn’t permanently destroyed.
 
+//    Obtained from the "The Ashroot Hollow"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.infernal_canopy.lore").formatted(Formatting.DARK_GREEN));

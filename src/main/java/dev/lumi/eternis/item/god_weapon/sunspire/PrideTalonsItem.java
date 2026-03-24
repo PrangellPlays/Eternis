@@ -22,6 +22,8 @@ public class PrideTalonsItem extends Item implements IRelicItem {
 //    2 kills: gain Speed I after kill
 //    5 kills: ability Hunter's Leap (long dash attack)
 
+//    Obtained from the "The Dawn Reach"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.pride_talons.lore").formatted(Formatting.YELLOW));

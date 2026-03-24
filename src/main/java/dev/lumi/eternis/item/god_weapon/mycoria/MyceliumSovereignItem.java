@@ -29,6 +29,8 @@ public class MyceliumSovereignItem extends Item implements IRelicItem {
 //    Ability — Spore Cloud:
 //    Poison area attack.
 
+//    Obtained from the "The Sporeheart"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.mycelium_sovereign.lore").formatted(Formatting.DARK_PURPLE));

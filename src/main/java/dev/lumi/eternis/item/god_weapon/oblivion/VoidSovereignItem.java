@@ -29,6 +29,8 @@ public class VoidSovereignItem extends Item implements IRelicItem {
 //    Second Ability — Void Rift:
 //    Short teleport ability.
 
+//    Obtained from the "The Null Vault"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.void_sovereign.lore").formatted(Formatting.DARK_GRAY));

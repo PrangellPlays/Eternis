@@ -1,7 +1,7 @@
-package dev.lumi.eternis.block.parkour;
+package dev.lumi.eternis.block.dungeon.parkour;
 
 import com.mojang.serialization.MapCodec;
-import dev.lumi.eternis.block.astract.AbstractParkourPlateBlock;
+import dev.lumi.eternis.block.dungeon.astract.AbstractParkourPlateBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.entity.Entity;
@@ -14,25 +14,29 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CryoPlateBlock extends AbstractParkourPlateBlock {
-    public static final MapCodec<CryoPlateBlock> CODEC = createCodec(CryoPlateBlock::new);
+public class ImpulsePlateBlock extends AbstractParkourPlateBlock {
+    public static final MapCodec<ImpulsePlateBlock> CODEC = createCodec(ImpulsePlateBlock::new);
 
-    public CryoPlateBlock(Settings settings) {
-        super(settings.slipperiness(0.98F));
+    public ImpulsePlateBlock(Settings settings) {
+        super(settings);
     }
 
     @Override
     protected void applyEffect(ServerWorld world, BlockPos pos, BlockState state, Entity entity) {
-        if (!world.isClient && entity instanceof LivingEntity living) {
-            Vec3d vel = living.getVelocity();
+        if (!(entity instanceof LivingEntity living)) return;
 
-            living.setVelocity(vel.x * 0.92, vel.y, vel.z * 0.92);
-            living.velocityModified = true;
-        }
+        Vec3d look = living.getRotationVector().normalize();
+        Vec3d current = living.getVelocity();
+
+        double strength = 1.6D;
+        double upward = 0.18D;
+
+        Vec3d launch = new Vec3d(look.x * strength, upward, look.z * strength);
+        living.setVelocity(current.x * 0.25D + launch.x, Math.max(current.y, launch.y), current.z * 0.25D + launch.z);
+        living.velocityModified = true;
     }
 
     @Override
@@ -43,6 +47,6 @@ public class CryoPlateBlock extends AbstractParkourPlateBlock {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("lore.eternis.block.rotatable_block").formatted(Formatting.GRAY));
-        tooltip.add(Text.translatable("block.eternis.cryo_plate.desc").formatted(Formatting.DARK_GREEN));
+        tooltip.add(Text.translatable("block.eternis.impulse_plate.desc").formatted(Formatting.DARK_GREEN));
     }
 }

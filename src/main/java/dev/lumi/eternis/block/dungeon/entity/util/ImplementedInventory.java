@@ -1,4 +1,4 @@
-package dev.lumi.eternis.block.entity.util;
+package dev.lumi.eternis.block.dungeon.entity.util;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

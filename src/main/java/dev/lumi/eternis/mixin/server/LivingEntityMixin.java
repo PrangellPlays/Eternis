@@ -20,11 +20,8 @@ public abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(
-            method = {"swingHand(Lnet/minecraft/util/Hand;Z)V"},
-            at = {@At("HEAD")}
-    )
-    private void eternis$stopAccumulate(Hand hand, boolean fromServerPlayer, CallbackInfo ci) {
+    @Inject(method = {"swingHand(Lnet/minecraft/util/Hand;Z)V"}, at = {@At("HEAD")})
+    private void eternis$sendWeaponKills(Hand hand, boolean fromServerPlayer, CallbackInfo ci) {
         LivingEntity entity = (LivingEntity) (Object) this;
         if (entity instanceof PlayerEntity player && player.getMainHandStack().getItem() instanceof EnemySlainWeaponItem && player.isSneaking()) {
             int entityKillCount = player.getMainHandStack().get(EternisDataComponents.ENTITY_DEATH_COUNT);

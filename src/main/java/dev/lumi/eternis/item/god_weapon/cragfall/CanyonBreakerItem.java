@@ -26,6 +26,8 @@ public class CanyonBreakerItem extends Item implements IRelicItem {
 //    Ability — Landslide:
 //    Breaks nearby stone blocks outward.
 
+//    Obtained from the "The Fallen Quarry"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.canopy_breaker.lore").formatted(Formatting.RED));

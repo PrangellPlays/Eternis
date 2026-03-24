@@ -21,6 +21,8 @@ public class PharaohsJudgementItem extends Item implements IRelicItem {
 //    Ability — Tomb Guard:
 //    Summons husks.
 
+//    Obtained from the "The Gilded Tomb"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.pharaohs_judgement.lore").formatted(Formatting.GOLD));

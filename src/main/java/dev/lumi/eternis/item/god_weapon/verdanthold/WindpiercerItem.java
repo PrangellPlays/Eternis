@@ -25,6 +25,8 @@ public class WindpiercerItem extends Item implements IRelicItem {
 //    Ability — Gale:
 //    Pushes enemies away.
 
+//    Obtained from the "The Overgrown Citadel"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.windpiercer.lore").formatted(Formatting.GREEN));

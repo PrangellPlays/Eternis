@@ -21,6 +21,8 @@ public class DuneScimitarItem extends Item implements IRelicItem {
 //    Ability — Sandstorm:
 //    Creates blindness cloud.
 
+//    Obtained from the "Buried Temple"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.dune_scimitar.lore").formatted(Formatting.GOLD));

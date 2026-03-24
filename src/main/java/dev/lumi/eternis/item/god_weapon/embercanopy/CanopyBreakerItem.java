@@ -25,6 +25,8 @@ public class CanopyBreakerItem extends Item implements IRelicItem {
 //    Ability — Vine Snare:
 //    Vines trap enemies.
 
+//    Obtained from the "The Canopy Shrine"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.canopy_breaker.lore").formatted(Formatting.DARK_GREEN));

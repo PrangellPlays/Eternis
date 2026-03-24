@@ -31,6 +31,8 @@ public class HellgateTyrantItem extends SwordItem implements IRelicItem {
 //    Second Ability — Infernal Summon:
 //    Spawns blazes and wither skeletons.
 
+//    Obtained from the "Hell Foundry"
+
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

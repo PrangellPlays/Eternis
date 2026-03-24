@@ -3,10 +3,10 @@
   "package": "dev.lumi.eternis.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "server.LivingEntityMixin"
+    "server.LivingEntityMixin",
+    "server.ServerPlayerInteractionManagerMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1

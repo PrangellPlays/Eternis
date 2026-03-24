@@ -1,7 +1,7 @@
-package dev.lumi.eternis.block.parkour;
+package dev.lumi.eternis.block.dungeon.parkour;
 
 import com.mojang.serialization.MapCodec;
-import dev.lumi.eternis.block.astract.AbstractParkourPlateBlock;
+import dev.lumi.eternis.block.dungeon.astract.AbstractParkourPlateBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.entity.Entity;
@@ -14,8 +14,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 
 import java.util.List;
 

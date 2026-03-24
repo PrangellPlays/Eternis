@@ -23,6 +23,8 @@ public class VenomReaverItem extends SwordItem implements IRelicItem {
 //    2 kills: poison duration increases
 //    5 kills: Serpent Call spawns bogged
 
+//    Obtained from the "The Wildroot Temple"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.venom_reaver.lore").formatted(Formatting.DARK_GREEN));

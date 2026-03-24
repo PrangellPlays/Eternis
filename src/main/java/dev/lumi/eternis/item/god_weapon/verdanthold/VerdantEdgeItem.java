@@ -26,6 +26,8 @@ public class VerdantEdgeItem extends Item implements IRelicItem {
 //    Ability — Bloom:
 //    Nearby flowers heal allies.
 
+//    Obtained from the "The Rootbound Halls"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.verdant_edge.lore").formatted(Formatting.GREEN));

@@ -1,6 +1,6 @@
-package dev.lumi.eternis.client.screen;
+package dev.lumi.eternis.client.screen.kit;
 
-import dev.lumi.eternis.block.entity.KitSelectorBlockEntity;
+import dev.lumi.eternis.block.dungeon.entity.KitSelectorBlockEntity;
 import dev.lumi.eternis.client.init.EternisScreenHandlers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -34,35 +34,45 @@ public class KitModifyScreenHandler extends ScreenHandler {
             public void markDirty() {
                 super.markDirty();
 
-                for (int i = 0; i < size(); i++) {
-                    kit.set(i, getStack(i));
+                if (blockEntity != null) {
+                    blockEntity.saveKit(kitIndex, this);
                 }
-
-                blockEntity.markDirty();
             }
         };
 
         for (int i = 0; i < kit.size(); i++) {
-            inventory.setStack(i, kit.get(i));
+            inventory.setStack(i, kit.get(i).copy());
         }
 
         // Kit inventory
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
-                int slot = col + row * 9;
-                this.addSlot(new Slot(inventory, slot, 8 + col * 18, 18 + row * 18));
-            }
-        }
-
-        // Player inventory
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 9; col++) {
-                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+                int slot = col + row * 9 + 9;
+                this.addSlot(new Slot(inventory, slot, 8 + col * 18, 21 + row * 18));
             }
         }
 
         for (int col = 0; col < 9; col++) {
-            this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
+            this.addSlot(new Slot(inventory, col, 8 + col * 18, 78));
+        }
+
+        for (int row = 0; row < 4; row++) {
+            int armorSlot = 36 + row;
+            this.addSlot(new Slot(inventory, armorSlot, 173, 21 + row * 19));
+        }
+
+        this.addSlot(new Slot(inventory, 40, 192, 78));
+
+        //Player Inventory
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 9; col++) {
+                int slot = 9 + col + row * 9;
+                this.addSlot(new Slot(playerInventory, slot, 8 + col * 18, 110 + row * 18));
+            }
+        }
+
+        for (int col = 0; col < 9; col++) {
+            this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 168));
         }
     }
 
@@ -93,6 +103,27 @@ public class KitModifyScreenHandler extends ScreenHandler {
     @Override
     public boolean canUse(PlayerEntity player) {
         return true;
+    }
+
+    @Override
+    public void onClosed(PlayerEntity player) {
+        super.onClosed(player);
+
+        if (!player.getWorld().isClient && blockEntity != null) {
+            blockEntity.saveKit(kitIndex, inventory);
+        }
+    }
+
+    @Override
+    public boolean onButtonClick(PlayerEntity player, int id) {
+        if (id == 20) {
+            if (!player.getWorld().isClient && blockEntity != null) {
+                blockEntity.saveKit(kitIndex, inventory);
+            }
+            return true;
+        }
+
+        return false;
     }
 
     public record KitModifyData(BlockPos pos, int kitIndex) {

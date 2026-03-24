@@ -1,4 +1,4 @@
-package dev.lumi.eternis.client.screen;
+package dev.lumi.eternis.client.screen.kit;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import dev.lumi.eternis.Eternis;
@@ -19,8 +19,9 @@ public class KitModifyScreen extends HandledScreen<KitModifyScreenHandler> {
 
     public KitModifyScreen(KitModifyScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
-        this.backgroundWidth = 176;
-        this.backgroundHeight = 166;
+        this.backgroundWidth = 216;
+        this.backgroundHeight = 192;
+        this.playerInventoryTitleY = this.backgroundHeight - 94;
     }
 
     @Override

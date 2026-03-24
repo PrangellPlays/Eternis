@@ -21,6 +21,8 @@ public class StormJavelinItem extends Item implements IRelicItem {
 //    Ability — Thunderstorm:
 //    Forces thunder weather and strikes the hit area with lightning.
 
+//    Obtained from the "The Solar Bastion"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.storm_javelin.lore").formatted(Formatting.YELLOW));

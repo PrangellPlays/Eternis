@@ -1,9 +1,11 @@
-package dev.lumi.eternis.block.entity;
+package dev.lumi.eternis.block.dungeon.entity;
 
 import dev.lumi.eternis.init.EternisBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -43,14 +45,43 @@ public class KitSelectorBlockEntity extends BlockEntity {
     public void setKitName(int index, String name) {
         kitNames[index] = name;
         markDirty();
+
+        if (world != null) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+        }
     }
 
-    public void giveKit(PlayerEntity player, int kit) {
+    public void giveKit(PlayerEntity player, int kitIndex) {
+        if (kitIndex < 0 || kitIndex >= KIT_COUNT) return;
+        DefaultedList<ItemStack> kit = kits[kitIndex];
+        PlayerInventory inv = player.getInventory();
 
-        for (ItemStack stack : kits[kit]) {
-            if (!stack.isEmpty()) {
-                player.giveItemStack(stack.copy());
-            }
+        inv.clear();
+
+        for (int i = 0; i < 36; i++) {
+            inv.setStack(i, kit.get(i).copy());
+        }
+
+        for (int i = 36; i <= 39; i++) {
+            inv.setStack(i, kit.get(i).copy());
+        }
+
+        inv.setStack(40, kit.get(40).copy());
+        player.currentScreenHandler.sendContentUpdates();
+    }
+
+    public void saveKit(int kitIndex, Inventory source) {
+        if (kitIndex < 0 || kitIndex >= KIT_COUNT) return;
+        DefaultedList<ItemStack> kit = kits[kitIndex];
+
+        for (int i = 0; i < Math.min(kit.size(), source.size()); i++) {
+            kit.set(i, source.getStack(i).copy());
+        }
+
+        markDirty();
+
+        if (world != null) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
         }
     }
 
@@ -81,17 +112,24 @@ public class KitSelectorBlockEntity extends BlockEntity {
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup lookup) {
         super.readNbt(nbt, lookup);
         for (int i = 0; i < KIT_COUNT; i++) {
-            kits[i].clear();
-            kits[i].addAll(DefaultedList.ofSize(KIT_SIZE, ItemStack.EMPTY));
-            NbtList list = nbt.getList("Kit" + i, NbtElement.COMPOUND_TYPE);
+            for (int slot = 0; slot < KIT_SIZE; slot++) {
+                kits[i].set(slot, ItemStack.EMPTY);
+            }
 
+            NbtList list = nbt.getList("Kit" + i, NbtElement.COMPOUND_TYPE);
             for (int j = 0; j < list.size(); j++) {
                 NbtCompound entry = list.getCompound(j);
                 int slot = entry.getByte("Slot") & 255;
-                ItemStack stack = ItemStack.fromNbt(lookup, entry.getCompound("Item")).orElse(ItemStack.EMPTY);
-                kits[i].set(slot, stack);
+
+                if (slot >= 0 && slot < KIT_SIZE) {
+                    ItemStack stack = ItemStack.fromNbt(lookup, entry.getCompound("Item")).orElse(ItemStack.EMPTY);
+                    kits[i].set(slot, stack);
+                }
             }
-            kitNames[i] = nbt.getString("Name" + i);
+
+            if (nbt.contains("Name" + i, NbtElement.STRING_TYPE)) {
+                kitNames[i] = nbt.getString("Name" + i);
+            }
         }
     }
 }

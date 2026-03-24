@@ -21,6 +21,8 @@ public class HeartwoodReaverItem extends Item implements IRelicItem {
 //    Ability — Forest Grasp:
 //    Vines grow around enemies slowing them.
 
+//    Obtained from the "The Moonshade Keep"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.heartwood_reaver.lore").formatted(Formatting.DARK_GREEN));

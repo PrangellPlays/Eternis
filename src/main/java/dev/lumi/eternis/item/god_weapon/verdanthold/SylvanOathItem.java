@@ -21,6 +21,8 @@ public class SylvanOathItem extends Item implements IRelicItem {
 //    Ability — Woodland Call:
 //    Summons wolves.
 
+//    Obtained from the "The Fallen Keep"
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("item.eternis.sylvan_oath.lore").formatted(Formatting.GREEN));
